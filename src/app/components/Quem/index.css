@@ -1,0 +1,45 @@
+
+#quem .titulo{
+    font-size: 40px;
+    font-weight: 400;
+}
+#quem p{
+    font-size: 20px;
+}
+.l1{
+    width: 50%;
+}
+.l2{
+    width: 50%;
+}
+.info2{
+    color: black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 700px;
+    height: 400px;
+}
+.info2 p{
+    width: 80%;
+}
+.info2 .t{
+    font-weight: 300;
+    font-size: 43px;
+}
+.info2 p:nth-of-type(2){
+    margin-top: 20px;
+    font-size: 18px;
+}
+#info{
+    box-shadow: inset -20px -20px 145px rgba(0, 0, 0, 0.76);
+}
+.linha2{
+    height: 2px;
+    width: 100px;
+    background: rgb(0, 107, 41);
+}
+@media screen and (max-width:650px) {
+
+}
