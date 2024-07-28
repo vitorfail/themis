@@ -1,0 +1,71 @@
+.conteudo{
+    width: 100%;
+    height: 650px;
+}
+.banner{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+.banners{
+    box-shadow: inset 0px 0px 13px rgba(0, 0, 0, 0.527);
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+#show{
+    display: flex;
+}
+.painel{
+    animation: painel 0.1s linear;
+    display: none;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px -15px 72px rgba(0, 0, 0, 0.712);
+}
+.banner .pontos{
+    margin-top: 30%;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#ponto{
+    background: white;
+}
+.banner .pontos span{
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 1px;
+    background: rgba(255, 255, 255, 0.438);
+}
+.barra{
+    width: 100%;
+    height: 24%;
+    color: black;
+    display: flex;
+    justify-content: center;align-items: center;
+    align-items: center;
+    background: #F6F5F2;
+}
+.barra p{
+    justify-content: center;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 600;
+    width: 60%;
+}
+@keyframes painel {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}

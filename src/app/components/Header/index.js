@@ -1,10 +1,12 @@
 import "./index.css"
-
-export default function Headers(){
+import Image from "next/image"
+export default function Cabecalho(){
 
     return(
         <header>
-            <span className="icon"></span>
+            <span className="icon">
+                <Image height={130} width={100} src="/img/icon.jpg"></Image>
+            </span>
             <div className="content"></div>
         </header>
     )
