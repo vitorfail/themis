@@ -3,6 +3,8 @@ import { useState } from "react"
 import "./index.css"
 import Image from "next/image"
 export default function Quem(){
+    const [membros, setmembros] = useState(721)
+    const [cidades, setcidades] = useState(8)
     return(
         <section style={{background:"#f6f5f2",height:"700px"}} className="cont">
             <div id="quem" className="cont2">
@@ -29,7 +31,16 @@ export default function Quem(){
                                 </p>
                             </div>
                         </div>
-                    <div className="l2"></div>
+                    <div className="l2">
+                        <div className="dados">
+                            <p>{cidades}</p>
+                            <p>Cidade</p>
+                        </div>
+                        <div className="dados">
+                            <p>{membros}</p>
+                            <p>Membros</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

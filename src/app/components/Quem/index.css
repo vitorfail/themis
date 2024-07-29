@@ -40,6 +40,13 @@
     width: 100px;
     background: rgb(0, 107, 41);
 }
+.dados{
+    border-top: 4px solid rgb(0, 107, 41);
+}
+.dados p:nth-of-type(1){
+    font-size: 25px;
+    color: rgb(0, 107, 41);
+}
 @media screen and (max-width:650px) {
 
 }
