@@ -4,6 +4,10 @@
   src: url("./font/OpenSans-Light.ttf");
 }
 @font-face {
+  font-family: "WW";
+  src: url("./font/WWF\ Regular.ttf");
+}
+@font-face {
   font-family: "Open Sans";
   font-weight: 200;
   src: url("./font/OpenSans-Regular.ttf");
@@ -17,8 +21,8 @@
   src: url("./font/OpenSans-ExtraBold.ttf");
 }@font-face {
   font-family: "Open Sans";
-  font-weight: 400;
-  src: url("./font/OpenSans-Medium.ttf");
+  font-weight: 500;
+  src: url("./font/WWF\ Regular.ttf");
 }@font-face {
   font-family: "Open Sans";
   font-weight: 500;
@@ -50,14 +54,14 @@ main{
   flex-direction: column;
 }
 .cont{
+  padding-top: 45px;
   width: 100%;
   height: auto;
-  margin-top: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .cont2{
-  width: 80%;
-  height: auto;
+  width: 90%;
+  min-width: 300px;
 }

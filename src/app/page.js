@@ -5,6 +5,7 @@ import "./globals.css"
 import Noticias from "./components/Noticias";
 import Banner2 from "./components/Banner2";
 import Quem from "./components/Quem";
+import Rodape from "./components/Rodape/Rodape";
 export default function Home() {
   return (
     <main>
@@ -13,6 +14,7 @@ export default function Home() {
       <Noticias></Noticias>
       <Banner2></Banner2>
       <Quem></Quem>
+      <Rodape></Rodape>
     </main>
   );
 }

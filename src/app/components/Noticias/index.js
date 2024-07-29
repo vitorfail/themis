@@ -15,7 +15,7 @@ export default function Noticias(){
         <section id="not" className="cont">
             <section className="cont2">
                 <p style={{fontWeight:"300",width:"100%", fontSize:"30px", marginTop:"50px", marginBottom:"90px"}}>Veja nossos projetos:</p>
-                <div style={{width:"100%", display:"flex",justifyContent:"space-between", flexWrap:"wrap"}}>
+                <div id="cont-card" style={{width:"100%", display:"flex",justifyContent:"space-between", flexWrap:"wrap"}}>
                     <div className="card">
                         <Image src={Um} onError={(e) => console.error("Erro ao carregar a imagem", e)} height={300} width={200}></Image>
                         <p style={{fontWeight:"300", fontSize:"27px"}}>Projeto pontual realizado 

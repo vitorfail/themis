@@ -31,9 +31,15 @@
   cursor: pointer;
   text-decoration: underline;
 }
+#not{
+  padding-bottom: 65px;
+}
 @media screen and (max-width:650px) {
   #not::after{
     height: 80vh;
     margin-top: 48%;
+  }
+  #cont-card{
+    justify-content: center;
   }
 }

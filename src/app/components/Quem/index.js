@@ -6,7 +6,7 @@ export default function Quem(){
     const [membros, setmembros] = useState(721)
     const [cidades, setcidades] = useState(8)
     return(
-        <section style={{background:"#f6f5f2",height:"700px"}} className="cont">
+        <section style={{background:"#f6f5f2"}} className="cont">
             <div id="quem" className="cont2">
                 <p className="titulo" style={{width:'100%'}}>Quem nós somos</p>
                 <p style={{width:'100%'}}>Conheça a nossa história, os nossos projetos, a 
@@ -33,13 +33,26 @@ export default function Quem(){
                         </div>
                     <div className="l2">
                         <div className="dados">
-                            <p>{cidades}</p>
-                            <p>Cidade</p>
+                            <div className="head">
+                                <p>{cidades}</p>
+                                <p>Cidade</p>
+                            </div>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9 5H11V7H9V5ZM9 9H11V15H9V9ZM10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 18C5.59 18 2 14.41 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 14.41 14.41 18 10 18Z" fill="black">
+                                    
+                            </path>
+                            </svg>
                         </div>
                         <div className="dados">
-                            <p>{membros}</p>
-                            <p>Membros</p>
-                        </div>
+                            <div className="head">
+                                <p>{membros}</p>
+                                <p>Membros</p>
+                            </div>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9 5H11V7H9V5ZM9 9H11V15H9V9ZM10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 18C5.59 18 2 14.41 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 14.41 14.41 18 10 18Z" fill="black">
+                                    
+                            </path>
+                            </svg>                        </div>
                     </div>
                 </div>
             </div>
