@@ -1,10 +1,11 @@
 "use client";
-import { useState } from "react"
+import {useEffect, useState } from "react"
 import "./index.css"
 import Image from "next/image"
 export default function Banner(props){
     const imagens = ["/img/nature.jpg", "/img/mulher.jpg", "/img/family.jpg"]
     const [id, setid] = useState(0)
+
     return(
         <div className="conteudo">
             <div className="banner">

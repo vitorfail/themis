@@ -7,7 +7,11 @@ export default function Cabecalho(){
             <span className="icon">
                 <Image height={130} width={100} src="/img/icon.jpg"></Image>
             </span>
-            <div className="content"></div>
+            <div className="cabecalho">
+                <a href="#not">PROJETOS</a>
+                <a href="#info">CONTRIBUA</a>
+                <a href="#quem">QUE SOMOS</a>
+            </div>
         </header>
     )
 }
