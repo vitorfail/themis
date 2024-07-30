@@ -51,7 +51,6 @@
     display: flex;
 }
 .dados:nth-child(1){
-    border-bottom: 0,5px solid #34573a;
     border-top: 1px solid #34573a;
 }
 .dados:nth-child(2){
