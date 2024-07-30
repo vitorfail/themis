@@ -16,7 +16,7 @@ export default function Banner(props){
                 </div>
                 <div className="pontos">
                     {imagens.map((item, index) =>(
-                        <span onClick={(e) => setid(index)} id={index ==id?"ponto":""} key={index}>.</span>
+                        <span onClick={(e) => setid(index)} id={index ==id?"ponto":""} key={index}></span>
                     ))}
                 </div>
             </div>
