@@ -1,32 +1,85 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <div class="center">
-                <img/>
+                <img alt="icon" style="width: 80px;height: 70px;" src="./icon.png"/>
                 <div class="op">
-                    <span>Quem Somos</span>
-                    <span>Projetos</span>
-                    <span>Notícias</span>
-                    <span>Instituicional</span>
+                    <span>QUEM SOMOS</span>
+                    <span>PROJETOS</span>
+                    <span>NOTICIAS</span>
+                    <span>INSTITUCIONAL</span>
                 </div>  
                 <button class="doar">Doar</button>
             </div>
         </header>
+        <form class="pontos">
+            <input onclick="passar(0)" type="radio" name="select" id="ponto0"/>
+            <input onclick="passar(1)" type="radio" name="select" id="ponto1"/>
+            <input onclick="passar(2)" type="radio" name="select" id="ponto2"/>
+            <input onclick="passar(3)" type="radio" name="select" id="ponto3"/>
+        </form>
         <div class="banner">
-            <div class="pontos">
-                <span onclick="passar(0)" class="1"></span>
-                <span onclick="passar(1)" class="2"></span>
-            </div>
             <div class="carrosel">
                 <div class="slide">
-                    
+                    <div class="sombra">
+                        <p class="titulo">Heróis usam máscaras</p>
+                        <p class="texto">Veja nosso projeto para ajudar proffisionais da saúde</p>
+                        <button>Ajude</button>    
+                    </div>
                 </div>
-                <div class="slide"></div>
+                <div class="slide">
+                    <div class="sombra">
+                        <p class="titulo">Potência Feminina</p>
+                        <p class="texto">Projeto em parceria com o GOOGLE, a Rede Mulher Empreendedora e 
+                            o ITF Instituto Themis 
+                            Furigo com o objetivo de capacitar gratuitamente 
+                            e impactar em dois anos (até jun/22) a vida 
+                            de 6 mil mulheres de diversas 
+                            comunidades espalhadas pelo 
+                            nosso país, embora nosso maior 
+                            foco é a Zona Leste em São Paulo 
+                            (Jardim Elba, Jardim Utinga e proximidades) e</p>
+                        <button>Ajude</button>    
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="sombra">
+                        <p class="titulo">Oficina CurióLook</p>
+                        <p class="texto">O objetivo deste projeto é gerar 
+                            renda para mulheres 
+                            em vulnerabilidade e capacitá-las, torná-las independentes 
+                            e melhorar a auto estima, gerar renda e trabalho.</p>
+                        <button>Ajude</button>    
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="sombra">
+                        <p class="titulo">Agricultura sustentável</p>
+                        <p class="texto">Apoiamos a produção dos pequenos produtores rurais do 
+                            Vale do Ribeira (região considerada 
+                            com maior índice de pobreza ]
+                            no Estado de SP) através de um 
+                            Programa Adote uma família no Vale 
+                            do Ribeira, desta forma 
+                            promovemos o desenvolvimento e o 
+                            crescimento dessa região através da agricultura familiar</p>
+                        <button>Ajude</button>    
+                    </div>
+                </div>
             </div>            
         </div>
+        <section class="noticias">
+            <div class="not">
+                <img style="width: 100%; height: 60%;" alt="icon" src="./1.jpg"/>
+                <p></p>
+            </div>
+        </section>
     </body>
     <script>
         let currentIndex = 0;
@@ -35,6 +88,7 @@
         const carouselItems = document.querySelectorAll('.slide');
 
         function passar(valor){
+            const ponto = document.getElementById("ponto"+valor)
             const carouselContainer = document.querySelector('.carrosel');
             console.log(valor*-100 +"%")
             carouselContainer.style.marginLeft = valor*-100 +"%"
@@ -43,12 +97,27 @@
     </script>
     <style>
         *{
+            font-family: "Raleway", sans-serif;;
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             transition: all 0.2s;
         }
+        .noticias{
+            width: 100%;
+            height: auto;
+            padding: 0px 40px;
+        }
+        body{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+        }
         header{
+            top: 0;
             position:fixed;
             background: rgba(0, 0, 0, 0.589);
             width: 100%;
@@ -66,7 +135,7 @@
         }
         .op{
             color: white;
-            width: 80%;
+            width: 50%;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -79,16 +148,32 @@
             background: rgb(179, 36, 36);
             border:none;
         }
+        .slide .texto{
+            width: 80%;
+            text-align: center;
+        }
         .doar:hover{
             cursor: pointer;
             background: white;
             outline: 1px solid rgb(179, 36, 36);
             color: rgb(179, 36, 36);
         }
+        .slide button{
+            cursor: pointer;
+            font-family: "Montserrat", sans-serif;
+            border-radius: 15px;
+            font-weight: 700;
+            margin-top: 40px;
+            font-size: 20px;
+            padding: 12px 60px;
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
         .banner{
             overflow-x: hidden;
             width: 100%;
-            height: 80vh;
+            height: 90vh;
         }
         .carrosel{
             min-width: max-content;            
@@ -103,31 +188,57 @@
             width:100vw;
             height: 100%;
         }
+        .sombra{
+            background: rgba(0, 0, 0, 0.486);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+        }
         .slide:nth-child(1){
-            background: blue;
+            background: url("1.jpg");
         }
         .slide:nth-child(2){
-            background: red;
+            background: url("2.jpeg");
+        }
+        .slide:nth-child(3){
+            background: url("3.jpeg");
+        }
+        .slide:nth-child(4){
+            background: url("4.jpg");
+        }
+        .slide:nth-child(1), .slide:nth-child(2),.slide:nth-child(3)
+        ,.slide:nth-child(4){
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
         }
         .pontos{
             justify-content: space-between;
             width: 100px;
-            left: 50%;
             z-index: auto;
             align-items: center;
             position: absolute;
             display: flex;
-            top: 50%;
+            top: 80%;
         }
-        .pontos span{
+        .pontos input{
             border-radius: 50%;
-            height: 30px;
-            width: 30px;
+            height: 15px;
+            width: 15px;
             background: rgba(255, 255, 255, 0.555);
         }
         .pontos span:focus{
             background: rgba(255, 0, 0, 0.644);
             outline: 2px solid white;
+        }
+        .slide .titulo{
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 40px;
         }
     </style>
 </html>
