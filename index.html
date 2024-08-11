@@ -18,12 +18,14 @@
                 <button class="doar">Doar</button>
             </div>
         </header>
-        <form class="pontos">
-            <input onclick="passar(0)" type="radio" name="select" id="ponto0"/>
-            <input onclick="passar(1)" type="radio" name="select" id="ponto1"/>
-            <input onclick="passar(2)" type="radio" name="select" id="ponto2"/>
-            <input onclick="passar(3)" type="radio" name="select" id="ponto3"/>
-        </form>
+        <div class="container">
+            <form class="pontos">
+                <input onclick="passar(0)" type="radio" name="select" id="ponto0"/>
+                <input onclick="passar(1)" type="radio" name="select" id="ponto1"/>
+                <input onclick="passar(2)" type="radio" name="select" id="ponto2"/>
+                <input onclick="passar(3)" type="radio" name="select" id="ponto3"/>
+            </form>    
+        </div>
         <div class="banner">
             <div class="carrosel">
                 <div class="slide">
@@ -74,12 +76,37 @@
                 </div>
             </div>            
         </div>
-        <section class="noticias">
-            <div class="not">
-                <img style="width: 100%; height: 60%;" alt="icon" src="./1.jpg"/>
-                <p></p>
+        <div class="noticias">
+            <div class="center">
+                <div class="not">
+                    <img style="width: 100%; height: 60%;" alt="icon" src="./1.jpg"/>
+                    <div class="descri">
+                        <p>Conheça os nossos projetos e a dedicação dos voluntários e parceiros</p>
+                        <p>Projeto pontual realizado em 2020 através da parceria com o 
+                            Instituto RME (Rede Mulher Empreendedora) com apoio dos Bancos Itaú</p>    
+                    </div>
+                    <p>08/07/2023</p>
+                </div>
+                <div class="not">
+                    <img style="width: 100%; height: 60%;" alt="icon" src="./1.jpg"/>
+                    <div class="descri">
+                        <p>Conheça os nossos projetos e a dedicação dos voluntários e parceiros</p>
+                        <p>Projeto pontual realizado em 2020 através da parceria com o 
+                            Instituto RME (Rede Mulher Empreendedora) com apoio dos Bancos Itaú</p>    
+                    </div>
+                    <p>08/07/2023</p>
+                </div>
+                <div class="not">
+                    <img style="width: 100%; height: 60%;" alt="icon" src="./1.jpg"/>
+                    <div class="descri">
+                        <p>Conheça os nossos projetos e a dedicação dos voluntários e parceiros</p>
+                        <p>Projeto pontual realizado em 2020 através da parceria com o 
+                            Instituto RME (Rede Mulher Empreendedora) com apoio dos Bancos Itaú</p>    
+                    </div>
+                    <p>08/07/2023</p>
+                </div>
             </div>
-        </section>
+        </div>
     </body>
     <script>
         let currentIndex = 0;
@@ -91,7 +118,13 @@
             const ponto = document.getElementById("ponto"+valor)
             const carouselContainer = document.querySelector('.carrosel');
             console.log(valor*-100 +"%")
-            carouselContainer.style.marginLeft = valor*-100 +"%"
+            console.log(window.innerWidth)
+            if(window.innerWidth <1200){
+                carouselContainer.style.marginLeft = valor*-100 +"%"
+            }
+            else{
+                carouselContainer.style.marginLeft = valor*-100-3 +"%"
+            }
         }
 
     </script>
@@ -104,17 +137,43 @@
             transition: all 0.2s;
         }
         .noticias{
+            display: flex;
+            justify-content: center;
             width: 100%;
             height: auto;
-            padding: 0px 40px;
+            padding: 140px 0px;
+        }
+        .not{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 350px;
+            height: 450px;
+        }
+        .descri{
+            width: 100%;
+            height: 300px;
+        }
+        .not p:nth-of-type(1){
+            color: #555;
+            font-size: 20px;
+            font-weight: 600;
         }
         body{
-            display: flex;
             width: 100%;
             height: 100%;
             align-items: center;
             flex-direction: column;
             position: absolute;
+        }
+        .container{
+            top: 84%;
+            justify-content: center;
+            display: flex;
+            position: absolute;
+            width: 100%;
+            height: auto;
         }
         header{
             top: 0;
@@ -221,7 +280,6 @@
             width: 100px;
             z-index: auto;
             align-items: center;
-            position: absolute;
             display: flex;
             top: 80%;
         }
